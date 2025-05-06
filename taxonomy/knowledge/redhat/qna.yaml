@@ -63,15 +63,15 @@ seed_examples:
       Registration establishes an authorized connection between your system and Red Hat. Red Hat issues the registered system, whether a physical or virtual machine, a certificate that identifies and authenticates the system so that it can receive protected content, software updates, security patches, support, and managed services from Red Hat. With a valid subscription, you can register a Red Hat Enterprise Linux (RHEL) system in the following ways: During the installation process, using an installer graphical user interface (GUI) or text user interface (TUI), After installation, using the command line (CLI), Automatically, during or after installation, using a kickstart script or an activation key.    
     questions_and_answers:
       - question: |
-          What specific benefits does a registered RHEL system receive from Red Hat, as listed in this text?
+          What specific benefits does a registered RHEL system receive from Red Hat?
         answer: |
-            The text states that a registered RHEL system, identified by a certificate from Red Hat, gains access to several benefits. These include receiving protected content, software updates, security patches, technical support, and various managed services provided by Red Hat.
+          The text states that a registered RHEL system, identified by a certificate from Red Hat, gains access to several benefits. These include receiving protected content, software updates, security patches, technical support, and various managed services provided by Red Hat.
       -question: |
           What prerequisite is mentioned for being able to register a RHEL system?
         answer: | 
-          The paragraph explicitly mentions that registration requires having a valid subscription to Red Hat Enterprise Linux.
+          registration requires having a valid subscription to Red Hat Enterprise Linux.
       - question: | 
-          Can registration only happen during the RHEL installation process? Explain based on the text.
+          Can registration only happen during the RHEL installation process?
         answer: | 
           No, registration is not limited to the installation process. While the text confirms registration can occur during installation (using GUI or TUI), it also clearly states that registration can happen after installation using the command line (CLI), or automatically either during or after installation via methods like kickstart or activation keys
   - context: |
@@ -80,7 +80,7 @@ seed_examples:
       - question: |
           What is the primary tool mentioned for managing multiple windows and logs during RHEL installation, and where does it run?
         answer: |
-          The text identifies the tmux terminal multiplexer as the tool used by the RHEL installer to display and control multiple windows alongside the main interface. It runs in virtual console 1.
+          The tmux terminal multiplexer is the tool used by the RHEL installer to display and control multiple windows alongside the main interface. It runs in virtual console 1.
       - question: | 
           Besides displaying logs, what other key feature might one of the tmux windows provide, and under what condition might this feature be unavailable?
         answer: | 
@@ -93,29 +93,30 @@ seed_examples:
       Swap file systems support virtual memory; data is written to a swap file system when there is not enough RAM to store the data your system is processing. Swap size is a function of system memory workload, not total system memory and therefore is not equal to the total system memory size. It is important to analyze what applications a system will be running and the load those applications will serve in order to determine the system memory workload. Application providers and developers can provide guidance. When the system runs out of swap space, the kernel terminates processes as the system RAM memory is exhausted.
     questions_and_answers:
       - question: |
-          Explain the concept of virtual memory support provided by swap file systems as described in the text.
+          Explain the concept of virtual memory support provided by swap file systems.
         answer: |
           Swap file systems support virtual memory by acting as an overflow space. When the system's physical RAM becomes full due to the data being processed, the system writes some of this data temporarily to the swap file system, effectively extending the available memory.
       - question: |
-          According to the paragraph, what is the incorrect way to determine swap size, and what is the correct approach?
+          What is the incorrect way to determine swap size, and what is the correct approach?
         answer: |
-          The text explicitly states that determining swap size simply based on the total amount of system RAM is incorrect; swap size is not necessarily equal to the total RAM. The correct approach involves analyzing the anticipated system memory workload, which means understanding the memory demands of the specific applications that will run on the system and the load they will handle.
+          Determining swap size simply based on the total amount of system RAM is incorrect; swap size is not necessarily equal to the total RAM. The correct approach involves analyzing the anticipated system memory workload, which means understanding the memory demands of the specific applications that will run on the system and the load they will handle.
       - question: |
           What consequence does the text describe if a system completely uses up its allocated swap space?
         answer: |
-          The paragraph explains that if a system runs out of available swap space while RAM is also exhausted, the Linux kernel will begin terminating active processes to free up memory resources.
+          If a system runs out of available swap space while RAM is also exhausted, the Linux kernel will begin terminating active processes to free up memory resources.
   - context: | 
       A signal 11 error, commonly known as a segmentation fault, means that a program accessed a memory location that it was not assigned. A signal 11 error can occur due to a bug in one of the software programs that are installed, or faulty hardware. If you receive a signal 11 error during the installation process, verify that you are using the most recent installation images and prompt the installation program to verify them to ensure they are not corrupt. Faulty installation media (such as an improperly burned or scratched optical disk) are a common cause of signal 11 errors.
     questions_and_answers:
       - question: | 
-          Define a "signal 11 error" or "segmentation fault" based on the explanation provided.
+          Define a "signal 11 error" or "segmentation fault".
         answer: | 
-          The text defines a signal 11 error (segmentation fault) as an event where a software program attempts to access a memory location that has not been allocated or assigned to it.
+          A signal 11 error (segmentation fault) as an event where a software program attempts to access a memory location that has not been allocated or assigned to it.
       - question: | 
-          What are the two general categories of causes for signal 11 errors mentioned in this paragraph?
+          What are the two general categories of causes for signal 11 errors?
         answer: | 
-          The paragraph identifies two potential root causes for signal 11 errors: either a bug within one of the installed software programs or a problem with the system's hardware components.
+          There are two potential root causes for signal 11 errors: either a bug within one of the installed software programs or a problem with the system's hardware components.
       - question: | 
           If a signal 11 error happens specifically during the RHEL installation, what is cited as a common cause, and what should be verified first?
         answer: | 
-          The text highlights faulty installation media (like a poorly burned or damaged optical disk) as a common reason for signal 11 errors during the installation phase. Therefore, the first recommended action is to verify that the installation images being used are the most recent versions and to perform a media integrity check using the installer to ensure they are not corrupted.
+          The faulty installation media (like a poorly burned or damaged optical disk) as a common reason for signal 11 errors during the installation phase. Therefore, the first recommended action is to verify that the installation images being used are the most recent versions and to perform a media integrity check using the installer to ensure they are not corrupted.
+
